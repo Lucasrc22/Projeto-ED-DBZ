@@ -1,0 +1,96 @@
+origem,destino,tipo,saga,peso
+Goku,Piccolo,aliado,Saiyajin,5
+Goku,Kuririn,aliado,Saiyajin,10
+Goku,Tenshinhan,aliado,Saiyajin,10
+Goku,Yamcha,aliado,Saiyajin,10
+Goku,Gohan Kid,aliado,Saiyajin,10
+Gohan Kid,Raditz,inimigo,Saiyajin,10
+Gohan Kid,Tenshinhan,aliado,Saiyajin,10
+Piccolo,Gohan Kid,aliado,Saiyajin,10
+Kuririn,Tenshinhan,aliado,Saiyajin,10
+Yamcha,Tenshinhan,aliado,Saiyajin,10
+Kuririn,Yamcha,aliado,Saiyajin,10
+Goku,Raditz,inimigo,Saiyajin,10
+Goku,Nappa,inimigo,Saiyajin,10
+Vegeta (saga Saiyajin),Nappa,aliado,Saiyajin,3
+Goku,Vegeta (saga Saiyajin),inimigo,Saiyajin,10
+Piccolo,Raditz,inimigo,Saiyajin,5
+Gohan Kid,Nappa,inimigo,Saiyajin,5
+Gohan Kid,Vegeta (saga Saiyajin),inimigo,Saiyajin,5
+Goku,Piccolo,aliado,Freeza,10
+Goku,Gohan Kid,aliado,Freeza,10
+Kuririn,Tenshinhan,aliado,Freeza,10
+Gohan Kid,Piccolo,aliado,Freeza,10
+Yamcha,Tenshinhan,aliado,Freeza,10
+Kuririn,Yamcha,aliado,Freeza,10
+Kuririn,Freeza,inimigo,Freeza,10
+Goku,Vegeta,aliado,Freeza,5
+Goku,Tropas Ginyu,inimigo,Freeza,10
+Goku,Freeza,inimigo,Freeza,10
+Vegeta,Freeza,inimigo,Freeza,10
+Vegeta,Tropas Ginyu,inimigo,Freeza,5
+Gohan Kid,Freeza,inimigo,Freeza,5
+Goku Super Saiyajin,Freeza,inimigo,Freeza,10
+Goku Super Saiyajin,Gohan Kid,aliado,Freeza,10
+Freeza,Tropas Ginyu,aliado,Freeza,10
+Goku,Piccolo,aliado,Cell,10
+Goku,Gohan Super Saiyajin 2,aliado,Cell,10
+Kuririn,Tenshinhan,aliado,Cell,10
+Yamcha,Tenshinhan,aliado,Cell,10
+Kuririn,Yamcha,aliado,Cell,10
+Gohan Super Saiyajin 2,Cell,inimigo,Cell,10
+Gohan Super Saiyajin 2,Goku,aliado,Cell,10
+Gohan Super Saiyajin 2,Piccolo,aliado,Cell,10
+Piccolo,Cell,inimigo,Cell,5
+Goku,Cell,inimigo,Cell,10
+Goku,Vegeta,aliado,Cell,5
+Goku,Vegeta,aliado,Majin Buu,10
+Goku,Gotenks,aliado,Majin Buu,10
+Gotenks,Majin Buu,inimigo,Majin Buu,10
+Kaioshin,Majin Buu,inimigo,Majin Buu,10
+Gotenks,Majin Buu,inimigo,Majin Buu,10
+Goku,Majin Buu,inimigo,Majin Buu,10
+Vegeta,Majin Buu,inimigo,Majin Buu,10
+Ultimate Gohan,Goku,aliado,Majin Buu,10
+Ultimate Gohan,Gotenks,aliado,Majin Buu,5
+Ultimate Gohan,Vegeta,aliado,Majin Buu,5
+Ultimate Gohan,Majin Buu,inimigo,Majin Buu,10
+Ultimate Gohan,Dabura,inimigo,Majin Buu,5
+Ultimate Gohan,Babidi,inimigo,Majin Buu,5
+Dabura,Goku,inimigo,Majin Buu,5
+Babidi,Dabura,aliado,Majin Buu,5
+Babidi,Majin Buu,aliado,Majin Buu,10
+Vegeta,Goku,aliado,Majin Buu,10
+Kuririn,Nappa,inimigo,Saiyajin,5
+Kuririn,Vegeta (saga Saiyajin),inimigo,Saiyajin,5
+Kuririn,Tropas Ginyu,inimigo,Freeza,5
+Kuririn,Cell,inimigo,Cell,5
+Kuririn,Dabura,inimigo,Majin Buu,5
+Yamcha,Nappa,inimigo,Saiyajin,5
+Yamcha,Tropas Ginyu,inimigo,Freeza,5
+Tenshinhan,Nappa,inimigo,Saiyajin,5
+Tenshinhan,Tropas Ginyu,inimigo,Freeza,5
+Tenshinhan,Cell,inimigo,Cell,5
+17e18,Vegeta,inimigo,Cell,5
+17e18,Piccolo,inimigo,Cell,5
+17e18,Trunks,inimigo,Cell,5
+19e20,Cell,aliado,Cell,10
+19e20,Goku,inimigo,Cell,10
+19e20,Vegeta,inimigo,Cell,10
+19e20,Yamcha,inimigo,Cell,5
+Trunks,Vegeta,aliado,Cell,10
+Trunks,Goku,aliado,Cell,10
+Trunks,Gohan Super Saiyajin 2,aliado,Cell,10
+Trunks,Piccolo,aliado,Cell,10
+Kaioshin,Ultimate Gohan,aliado,Majin Buu,10
+Kaioshin,Dabura,inimigo,Majin Buu,10
+Kaioshin,Goku,aliado,Majin Buu,10
+Majin Vegeta,Goku SSJ2,inimigo,Majin Buu,5
+Vegetto,Buuhan,inimigo,Majin Buu, 10
+
+
+
+
+
+
+
