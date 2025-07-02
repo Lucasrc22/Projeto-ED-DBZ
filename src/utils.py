@@ -96,7 +96,7 @@ def desenhar_grafo_com_imagens(G, pos, imagens, titulo="", nome_arquivo="grafo.p
     graus = dict(G.degree())
 #destaque para personagem que for vilão principal ser vermelho no grafo plotly
     for node in G.nodes():
-        zoom = 0.08 + (graus.get(node, 1) * 0.01) 
+        zoom = 0.13 + (graus.get(node, 1) * 0.01) 
 
         if node in imagens:
             img_obj = carregar_imagem(imagens[node], zoom=zoom)
