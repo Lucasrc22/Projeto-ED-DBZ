@@ -151,26 +151,6 @@ def construir_grafo_por_saga(relacoes, saga_nome=None):
             )
     return G
 
-def imprimir_metricas(G, nome_grafo):
-    print(f"\nMétricas do grafo: {nome_grafo}")
-    graus = dict(G.degree())
-    print("Grau dos nós:")
-    for k, v in graus.items():
-        print(f"  {k}: {v}")
-
-    centralidade = nx.betweenness_centrality(G)
-    print("\nCentralidade (betweenness):")
-    for k, v in centralidade.items():
-        print(f"  {k}: {v:.3f}")
-
-    componentes = nx.number_connected_components(G)
-    print(f"\nComponentes conectados: {componentes}")
-
-    if nx.is_connected(G):
-        diametro = nx.diameter(G)
-        print(f"Diâmetro da rede: {diametro}")
-    else:
-        print("Grafo desconexo, não tem diâmetro definido")
 
 def desenhar_grafo_com_imagens(G, pos, imagens, titulo="", nome_arquivo="grafo.png", saga=None, boss_final_node=None):
     fig, ax = plt.subplots(figsize=FIGSIZE)

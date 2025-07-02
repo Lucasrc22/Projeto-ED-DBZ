@@ -1,6 +1,6 @@
 from utils import (
     carregar_imagens_personagens, carregar_relacoes,
-    construir_grafo_por_saga, imprimir_metricas,
+    construir_grafo_por_saga,
     desenhar_grafo_com_imagens, desenhar_grafo_com_plotly,
     plotar_analise_metrica_grafo,
     bfs, dfs, dijkstra_aliados
@@ -34,7 +34,6 @@ def main():
             continue
 
         G_saga = construir_grafo_por_saga(relacoes, saga)
-        imprimir_metricas(G_saga, f"Grafo Saga {saga.capitalize()}")
 
         origem_busca = "Goku"
         if origem_busca in G_saga.nodes():
