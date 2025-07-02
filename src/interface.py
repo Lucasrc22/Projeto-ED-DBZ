@@ -12,6 +12,7 @@ SAGAS_HTML = {
     "Saga Majin Buu": "grafo_saga_majin_buu.html",
 }
 
+#Gerador dos comandos para abrir e selecionar os grafos interativo do plotly
 class GrafoDBZApp(QWidget):
     def __init__(self):
         super().__init__()

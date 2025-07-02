@@ -96,7 +96,7 @@ def desenhar_grafo_com_imagens(G, pos, imagens, titulo="", nome_arquivo="grafo.p
     graus = dict(G.degree())
 #destaque para personagem que for vilão principal ser vermelho no grafo plotly
     for node in G.nodes():
-        zoom = 0.20 + (graus.get(node, 1) * 0.01) 
+        zoom = 0.08 + (graus.get(node, 1) * 0.01) 
 
         if node in imagens:
             img_obj = carregar_imagem(imagens[node], zoom=zoom)
@@ -156,6 +156,15 @@ def bfs(G, origem):
     visitados = list(nx.bfs_tree(G, source=origem))
     print(f"\nBusca em largura (BFS) a partir de {origem}:")
     print(" -> ".join(visitados))
+
+
+
+
+
+
+
+
+
 def desenhar_grafo_com_plotly(G, titulo="", nome_arquivo="grafo.html", boss_final_node=None):
     pos = nx.spring_layout(G, seed=42, k=0.5) 
 
@@ -256,8 +265,6 @@ def plotar_analise_metrica_grafo(G, saga):
     output_path = os.path.join("outputs", f"analise_metricas_{saga.replace(' ', '_')}.html")
     fig.write_html(output_path)
     print(f"✅ Gráfico interativo salvo em: {output_path}")
-
-
 
 
 
