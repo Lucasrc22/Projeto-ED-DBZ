@@ -60,16 +60,18 @@ def desenhar_grafo_com_plotly(G, titulo="", nome_arquivo="grafo.html", boss_fina
         )
     )
 
-    fig = go.Figure(data=edge_traces + [node_trace],
-                    layout=go.Layout(
-                        title=titulo,
-                        titlefont_size=16,
-                        showlegend=False,
-                        hovermode='closest',
-                        margin=dict(b=20,l=5,r=5,t=40),
-                        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
-                        yaxis=dict(showgrid=False, zeroline=False, showticklabels=False)
-                    ))
+    fig = go.Figure(
+    data=edge_traces + [node_trace],
+    layout=go.Layout(
+        title=dict(text=titulo, font=dict(size=16)),
+        showlegend=False,
+        hovermode='closest',
+        margin=dict(b=20, l=5, r=5, t=40),
+        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+        yaxis=dict(showgrid=False, zeroline=False, showticklabels=False)
+    )
+)
+
 
     fig.write_html(nome_arquivo)
     print(f"Arquivo HTML salvo: {nome_arquivo}")
