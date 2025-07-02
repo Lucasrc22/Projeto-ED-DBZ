@@ -116,7 +116,7 @@ def carregar_imagens_personagens(path):
         for row in reader:
             imagens_personagens[row['nome']] = row['imagem']
     return imagens_personagens
-
+#traz as conexões entre os personagens(alianca ou inimizada), incluindo os pesos
 def carregar_relacoes(path):
     relacoes = []
     with open(path, newline='', encoding='utf-8') as csvfile:
@@ -131,6 +131,12 @@ def carregar_relacoes(path):
             })
     return relacoes
 
+
+#APAGAR DEPOIS PARA NÃO DUPLICAR
+
+
+
+#Associa cada personagem a sua imagem PNG
 def carregar_imagem(caminho, zoom=0.25):
     try:
         imagem = Image.open(caminho)
@@ -138,7 +144,8 @@ def carregar_imagem(caminho, zoom=0.25):
     except FileNotFoundError:
         print(f"Imagem não encontrada: {caminho}")
         return None
-
+#Cria o grado usando networkx, filtrando somente por saga
+#E com o add_node e add_egde vão criar os nós e arestas, respectivamente
 def construir_grafo_por_saga(relacoes, saga_nome=None):
     G = nx.Graph()
     for r in relacoes:
