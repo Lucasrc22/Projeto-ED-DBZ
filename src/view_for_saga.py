@@ -1,41 +1,43 @@
-
-import networkx as nx
+import os
+import webbrowser
 from utils import (
-    carregar_imagens_personagens,
     carregar_relacoes,
-    carregar_imagem,
     construir_grafo_por_saga,
-    desenhar_grafo_com_imagens
+    desenhar_grafo_com_plotly
 )
 
-PERSONAGENS_CSV = "data/personagens.csv"
 RELACOES_CSV = "data/relacoes.csv"
-#Metodo para construir grafos separados por sagas
-def visualizar_saga(saga_nome):
-    #lendo os csv
-    imagens_path = carregar_imagens_personagens(PERSONAGENS_CSV)
+OUTPUT_DIR = "outputs/"
+
+def visualizar_saga_com_plotly(saga_nome):
     relacoes = carregar_relacoes(RELACOES_CSV)
-#construção de grafo em uma saga especifica
     G_saga = construir_grafo_por_saga(relacoes, saga_nome)
 
-    pos_saga = nx.spring_layout(G_saga, seed=42, k=5)
+    nome_arquivo = os.path.join(
+        OUTPUT_DIR, f"grafo_saga_{saga_nome.lower().replace(' ', '_')}.html"
+    )
+    
+    boss_finais = {
+        "saiyajin": "Vegeta (saga Saiyajin)",
+        "freeza": "Freeza",
+        "cell": "Cell",
+        "majin buu": "Majin Buu"
+    }
 
+    chefe = boss_finais.get(saga_nome.lower())
 
-#carregar personagens por saga
-    imagens_saga = {}
-    for node in G_saga.nodes():
-        caminho_img = imagens_path.get(node)
-        if caminho_img:
-            img = carregar_imagem(caminho_img)
-            if img:
-                imagens_saga[node] = img
-
-    nome_arquivo = f"grafo_saga_{saga_nome.lower().replace(' ', '_')}.png"
-    desenhar_grafo_com_imagens(
-        G_saga, pos_saga, imagens_saga,
-        f"Grafo Saga {saga_nome}",
-        nome_arquivo,
-        saga=saga_nome
+    desenhar_grafo_com_plotly(
+        G_saga,
+        titulo=f"Grafo Saga {saga_nome.capitalize()}",
+        nome_arquivo=nome_arquivo,
+        boss_final_node=chefe
     )
 
+    print(f"🌐 Abrindo visualização no navegador: {nome_arquivo}")
+    webbrowser.open(f"file://{os.path.abspath(nome_arquivo)}")
 
+if __name__ == "__main__":
+    todas_sagas = ["saiyajin", "freeza", "cell", "majin buu"]
+    for saga in todas_sagas:
+        print(f"🔍 Gerando visualização interativa da saga: {saga.capitalize()}")
+        visualizar_saga_com_plotly(saga)
